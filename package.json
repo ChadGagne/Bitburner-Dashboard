@@ -1,0 +1,14 @@
+{
+  "name": "bitburnerdashboard",
+  "version": "3.0.0",
+  "description": "a dashboard for bitburner",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Chad G.",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^27.1.3"
+  }
+}

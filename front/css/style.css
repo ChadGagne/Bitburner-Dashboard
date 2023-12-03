@@ -1,0 +1,282 @@
+/*CSS RESET*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*GENERAL*/
+* {
+    color: #DEE0DF;
+    text-wrap: nowrap;
+    font-family: 'Cousine', monospace;
+}
+
+/*BODY*/
+body {
+    overflow-x: hidden;
+    background-color: #DEE0DF;
+}
+
+/*Content*/
+.content {
+    top: 0px;
+    left: 48px;
+    position: absolute;
+    height: fit-content;
+    width: calc(100vw - 48px);
+}
+
+/*SIDE MENU*/
+aside {
+    top: 0px;
+    left: 0px;
+    width: 48px;
+    z-index: 999;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    flex-wrap: nowrap;
+    padding: 25px 0 25px 0;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.5s ease-out;
+}
+
+aside:hover {
+    width: 160px;
+}
+
+aside button {
+    width: 100%;
+    border: none;
+    display: flex;
+    z-index: 1000;
+    font-size: 15px;
+    overflow: hidden;
+    text-align: left;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    transition: filter 0.2s;
+    justify-content: flex-start;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+aside button:hover {
+    filter: invert(100%);
+}
+
+aside .servers-button {
+    z-index: 1000;
+}
+
+aside button img {
+    margin: 0 5px 0 0;
+}
+
+aside button.settings{
+    margin: 0 0 50px 0;
+}
+
+.top-selection, .bottom-selection{
+    width: 100%;
+    height: 0px;
+    z-index: 998;
+    position: absolute;
+    transition: height 0.75s;
+    background-color: #000;
+}
+
+.top-selection{
+    top: 0px;
+    border-radius: 0 0 15px 0;
+}
+
+.bottom-selection {
+    bottom: 0px;
+    border-radius: 0 15px 0 0;
+}
+
+/*SERVER overview*/
+
+.content .overview {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 0 0 25px;
+}
+
+.server, .about, .data, .info{
+    display: flex;
+}
+
+.server {
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    border-radius: 25px;
+    margin: 0 25px 25px 0;
+    padding: 25px 0 0 25px;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.about {
+    flex-wrap: nowrap;
+    min-width: fit-content;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 38px;
+    padding: 5px 0 0 0;
+    margin: 0 25px 25px 0;
+}
+
+.grow, .weaken, .hack{
+    border-radius: 25px;
+    margin: 0 25px 25px 0;
+    padding: 15px 25px 5px 25px;
+}
+
+.true, .false {
+    border-radius: 25px;
+    padding: 11px 25px 8.5px 25px;
+}
+
+.grow p, .weaken p, .hack p, .admin p, .purchased p, .connected p, .backdoored p, .ftp p, .http p, .smtp p, .sql p, .ssh p{
+    color: #1B1C1E;
+}
+
+.grow , .admin .true, .purchased .false, .connected .true, .backdoored .true, .ftp .true, .http .true, .smtp .true, .sql .true, .ssh .true{
+    background-color: #25AF76;
+}
+
+.weaken {
+    background-color: #F5C208;
+}
+
+.hack, .admin .false, .purchased .true, .connected .false, .backdoored .false, .ftp .false, .http .false, .smtp .false, .sql .false, .ssh .false{
+    background-color: #E7493D;
+}
+
+.split {
+    height: 4px;
+    border-radius: 2px;
+    display: inline-block;
+    width: calc(100% - 25px);
+    margin: 1px 25px 25px 1px;
+    background-color: #DEE0DF;
+}
+
+.data {
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.data h3 {
+    margin: 0 50px 0 0;
+}
+
+.data .ratio {
+    margin: 0 0 0 50px;
+}
+
+.info .money, .info .security, .info .title, .admin, div.level, .purchased, .connected, .backdoored, .cores, .power, .organisation, div.used, div.available, div.opened, .ftp, .http, .smtp, .sql, .ssh, form, div.port, div.save  {
+    flex-grow: 1;
+    padding: 12.5px;
+    width: fit-content;
+    margin: 0 25px 25px 0;
+    border-radius: 12.5px;
+    background-color: #1B1C1E;
+}
+
+.info .title {
+    width: 100%;
+    text-align: center;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 10px;
+    background-color: #DEE0DF;
+}
+
+.info {
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    padding: 25px 0 0 25px;
+    background-color: #000;
+}
+
+.servers-complete {
+    align-items: center;
+    justify-content: center;
+}
+
+.server-complete {
+    margin: 25px;
+    height: fit-content;
+}
+
+.level .data {
+    height: 100%;
+}
+
+div.settings {
+    margin: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: fit-content;
+    border-radius: 25px;
+    padding: 25px 0 0 25px;
+    flex-direction: column;
+    width: calc(100% - 75px);
+    background-color: #000;
+}
+
+.settings .about {
+    width: calc(100% - 25px);
+}
+
+.settings .about h2 {
+    width: 100%;
+    text-align: center;
+}
+
+input {
+    color: #1B1C1E;
+}
+aside .servers-button {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+    width: 100%;
+}
+
+.settings button {
+    border: none;
+    border-radius: 25px;
+    padding: 11px 25px 8.5px 25px;
+    color: #1B1C1E;
+    background-color: #DEE0DF;
+}
+
+.settings button:hover {
+    color: #DEE0DF;
+    background-color: #000;
+}
+
+.settings button:active {
+    color: #DEE0DF;
+    background-color: #1B1C1E;
+}

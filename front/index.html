@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--title-->
+        <title>Bitburner Dashboard</title>
+
+        <!--meta-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+
+        <!--link-->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cousine&display=swap" rel="stylesheet">
+
+        <!--script-->
+        <script src="js/renderer.js" defer></script>
+    </head>
+    <body>
+        <!--Side menu-->
+        <aside>
+            <button class="overview"><img src="img/icons8-pile-48.png">overview</button>
+
+            <div class="servers-button">
+            </div>
+
+            <button class="settings"><img src="img/icons8-engrenage-48.png">settings</button>
+
+            <div class="top-selection"></div>
+            <div class="bottom-selection"></div>
+        </aside>
+
+        <!--content-->
+        <div class="content">
+
+            <!--Overview-->
+            <div class="overview">
+            </div>
+
+            <!--servers complete-->
+            <div class="servers-complete">
+            </div>
+
+            <!--settings-->
+            <div class="settings">
+                <div class="about">
+                    <h2>settings</h2>
+                </div>
+                <div class="split"></div>
+                <div class="info">
+                    <div class="port">
+                        <div class="data">
+                            <h3>port</h3>
+                            <input type="number" name="port" class="port">
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="save">
+                        <div class="data">
+                            <button class="save">save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
